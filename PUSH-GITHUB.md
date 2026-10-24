@@ -1,6 +1,6 @@
 # Publicar no GitHub — `birigjow/mesa-em-l`
 
-> Este PC (Lucas) **não tem** `git`, `gh` nem credencial. O push precisa ser feito numa máquina com a conta `birigjow` autenticada.
+> **Publicado em 23/10/2026:** repo `https://github.com/birigjow/mesa-em-l`, commit `e2634b1`, Pages ativo em `https://birigjow.github.io/mesa-em-l/`. Este guia fica para atualizações e para outras máquinas.
 
 ## 1. Autenticar (uma vez)
 

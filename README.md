@@ -65,7 +65,7 @@ A documentação interna (JORNADA, orçamento, padrão e handoff) fica no Drive 
 - Repositório: `https://github.com/birigjow/mesa-em-l`
 - Pages: `Settings → Pages → main / (root)`
 - Link: `https://birigjow.github.io/mesa-em-l/`
-- O `gh` autenticado como `birigjow` está no PC do Lucas; o passo a passo está em `PUSH-GITHUB.md`.
+- **Publicado em 23/10/2026** (commit `e2634b1`); o `gh` autenticado como `birigjow` está no PC do Lucas; o passo a passo de atualização está em `PUSH-GITHUB.md`.
 
 ## Créditos
 

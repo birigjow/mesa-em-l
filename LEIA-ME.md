@@ -30,7 +30,7 @@ O botão **Copiar link do cliente** no configurador gera esse link automaticamen
 3. Settings → Pages → Deploy from a branch → `main` / `(root)` → Save.
 4. Aguarde o deploy e abra `https://birigjow.github.io/mesa-em-l/`.
 
-O push precisa de `git`/`gh` autenticado na conta `birigjow`. Neste PC (Lucas) não há credencial; o pacote está no Drive e o comando está no `LEIA-ME.md` da entrega.
+**Publicado em 23/10/2026:** repo `https://github.com/birigjow/mesa-em-l` (commit `e2634b1`) e Pages ativo em `https://birigjow.github.io/mesa-em-l/`. Para atualizar, use `git`/`gh` autenticado como `birigjow` (ver `PUSH-GITHUB.md`).
 
 ## Como atualizar
 
