@@ -35,6 +35,7 @@ mesa-em-l-ferro.pdf         PDF de 8 páginas (opcional)
 logo.jpg                    favicon/marca
 og-mesa-em-l.jpg            cartão 1200×630 para WhatsApp/redes
 tools/make-og.py            gerador do cartão de prévia
+p/<cliente>/index.html      link fixo da proposta (ex.: p/ygor)
 LEIA-ME.md / PUSH-GITHUB.md manutenção e publicação
 ```
 
@@ -49,6 +50,7 @@ LEIA-ME.md / PUSH-GITHUB.md manutenção e publicação
 5. Teste em **390 px** e **1440 px**: 3D, furos, orçamento, sem overflow; 0 erro de console.
 6. No modo dono, preencha cliente/projeto, confira o preço e clique **Copiar link do cliente**.
 7. Publique no GitHub Pages (`birigjow/<movel>`) e envie o link curto.
+8. Para um link por cliente, crie `p/<cliente>/` com os parâmetros fixos (modelo `p/ygor/`) e envie `https://birigjow.github.io/mesa-em-l/p/<cliente>/`.
 
 A documentação interna (JORNADA, orçamento, padrão e handoff) fica no Drive CaosTF; este repo público contém só o site e o README.
 
