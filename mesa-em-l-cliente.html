@@ -469,11 +469,7 @@
           <p class="note" style="margin-top:12px"><strong>Fonte:</strong> <code>10-documentacao/PROJETOS/mesa-em-l</code> — JORNADA, lista de corte, furação e plano de fixação. Esta é a versão industrial de estudo (22/10); o projeto executivo de madeira continua no arquivo do Drive.</p>
         </section>
 
-        <section class="panel-section">
-          <h2>Custo estimado (interno)</h2>
-          <div id="cost-table"></div>
-          <p class="note" style="margin-top:10px;margin-bottom:0"><strong>Não é proposta:</strong> a cotação do ferro e da solda ainda não existe. O número serve para comparar as alternativas; o <code>financeiro</code> audita preço/margem antes de qualquer orçamento ao cliente.</p>
-        </section>
+        
 
               <section class="panel-section">
           <h2>Acabamento</h2>
@@ -508,23 +504,14 @@
       <div class="tabpane" id="tab-personalizar" role="tabpanel" aria-labelledby="tab-btn-personalizar" hidden>
         <section class="panel-section client-only">
           <div class="client-panel-head"><h2>Personalize sua mesa</h2><div class="client-head-actions"><button class="btn tiny public-only" id="btn-goto-budget" type="button">Orçamento</button><button class="btn tiny" id="btn-full-mode" type="button" aria-pressed="false">Ver tudo</button><button class="btn tiny" id="btn-copy-link-top" type="button">Copiar link</button><button class="btn tiny" id="btn-client-close" type="button">Sair</button></div></div>
-          <p class="note">Mude o comprimento e a profundidade de cada tampo. O 3D, a lista de corte, a furação e o custo interno se atualizam na hora.</p>
+          <p class="note">Mude o comprimento e a profundidade de cada tampo. O 3D, a lista de corte e a furação se atualizam na hora.</p>
         </section>
 
-        <section class="panel-section tech-only" id="client-budget">
-          <h2>Investimento de referência (interno)</h2>
-          <div class="client-price">
-            <div class="client-price-row"><span>Estrutura metálica + solda + pintura</span><b id="client-price-steel">—</b></div>
-            <div class="client-price-row"><span>Tampos de pinus 15 mm</span><b id="client-price-wood">—</b></div>
-            <div class="client-price-row"><span>Acabamento, ferragens e montagem</span><b id="client-price-labor">—</b></div>
-          </div>
-          <div class="client-price-total"><span>Valor de referência</span><strong id="client-price-total">R$ 0,00</strong></div>
-          <p class="client-price-note" id="client-price-note">Referência interna de lista (50%), não é o preço ao cliente. O orçamento auditado fica na seção Orçamento, depois das medidas.</p>
-        </section>
+        
 
         <section class="panel-section">
           <h2>Medidas do projeto</h2>
-          <p class="note"><strong>Base do projeto:</strong> pinus maciço 15 mm + ferro 40×40×2; 25 peças (inclui 7 barras de reforço inferior); sem gavetas (gaveteiro suspenso = fase 2). Cada tampo tem comprimento e profundidade próprios. O retorno precisa ter pelo menos 200 mm além da profundidade principal.</p>
+          <p class="note" id="base-note"><strong>Base do projeto:</strong> pinus maciço 15 mm + ferro 40×40×2; <span id="base-note-total">25</span> peças (inclui <span id="base-note-bars">7</span> barras de reforço inferior); sem gavetas (gaveteiro suspenso = fase 2). Cada tampo tem comprimento e profundidade próprios. O retorno precisa ter pelo menos 200 mm além da profundidade principal.</p>
           <div class="dim-group">
             <h3>Tampo principal</h3>
             <div class="field">
@@ -729,7 +716,7 @@
             <li><b>1</b><span><strong>Confira e etiquete as <span id="step1-total">25</span> peças</strong> contra a lista: <span id="step1-desc">2 tampos, 6 pernas, 7 quadros, 3 travessas e 7 barras de reforço inferior</span>; separe <span id="step1-bars">3</span> barras de 6 m.</span></li>
             <li><b>2</b><span><strong>Corte o ferro:</strong> <span id="step2-cuts">6 pernas de 695 mm; quadros 1960, 860, 760, 2080, 580, 760 e 1360 mm; travessas 760 mm (2) e 760 mm (1); reforço inferior 1960, 860, 1360, 760, 580, 2080 e 760 mm.</span> Lixe a rebarba e chanfre as pontas.</span></li>
             <li><b>3</b><span><strong>Monte o gabarito no chão:</strong> desenhe o L em tamanho real, posicione as pernas e as barras de reforço inferior e confira as diagonais e o esquadro antes de soldar.</span></li>
-            <li><b>4</b><span><strong>Solde o quadro e as pernas:</strong> primeiro pontos de solda, confira o esquadro, depois feche as soldas. O canto interno Q4/Q5 é em meia-esquadria (45°). Solde as 7 barras de reforço inferior (B1–B7) a 150 mm do piso. Cuidado com o empeno; deixe esfriar.</span></li>
+            <li><b>4</b><span><strong>Solde o quadro e as pernas:</strong> primeiro pontos de solda, confira o esquadro, depois feche as soldas. O canto interno Q4/Q5 é em meia-esquadria (45°). Solde as <span id="step4-bars">7 barras de reforço inferior (B1–B7)</span> a 150 mm do piso. Cuidado com o empeno; deixe esfriar.</span></li>
             <li><b>5</b><span><strong>Acabamento do ferro:</strong> lixe as soldas, desengordure, aplique fundo antiferrugem e 2 demãos de epóxi preto fosco. Deixe secar.</span></li>
             <li><b>6</b><span><strong>Coloque os pés ajustáveis</strong> nas pernas e nivele o quadro no piso. Confira a altura do topo do quadro: <span id="step6-top">735</span> mm.</span></li>
             <li><b>7</b><span><strong>Fure e lixe os tampos:</strong> 2 furos Ø60 — <span id="step7-holes">principal em (250, 120), canto frontal externo; retorno em (2810, 145), canto frontal externo</span>. Lixe a borda e aplique o acabamento.</span></li>
@@ -747,7 +734,7 @@
             <div class="spec-row"><dt>Fixação do tampo do retorno</dt><dd>1 âncora Ø6 + 3 rasgos 6×30</dd></div>
             <div class="spec-row"><dt>Pé ajustável</dt><dd>M8 · 6 pernas</dd></div>
             <div class="spec-row"><dt>Quadro</dt><dd>tubo 40×40×2 · solda</dd></div>
-            <div class="spec-row"><dt>Reforço inferior</dt><dd>7 barras B1–B7 · a 150 mm do piso · soldadas</dd></div>
+            <div class="spec-row"><dt>Reforço inferior</dt><dd id="spec-base">7 barras B1–B7 · a 150 mm do piso · soldadas</dd></div>
             <div class="spec-row"><dt>Topo do quadro</dt><dd id="drill-top">735 mm (H − 15)</dd></div>
             <div class="spec-row"><dt>Altura da perna</dt><dd id="drill-leg">695 mm (H − 15 − 40)</dd></div>
           </dl>
@@ -1449,6 +1436,11 @@
     return linhas;
   }
 
+  function baseIdsLabel(){
+    const ids = lastParts.filter((p) => /^B[1-7]$/.test(p.id)).map((p) => p.id);
+    return ids.length ? (ids.length === 7 ? "B1–B7" : ids.join(", ")) : "—";
+  }
+
   function renderSummary(g, pack){
     const finish = FINISHES[state.finish] || "—";
     $("sum-dims").innerHTML = `${fmtM(g.L1)} + ${fmtM(g.L2)} <span>m</span>`;
@@ -1467,11 +1459,17 @@
     $("print-client").textContent = `Cliente: ${client || "a definir"} · pinus 15 mm + ferro 40×40 · ${pack.sheets.length} chapas + ${lastBars.bars.length} barras`;
     const legCount = lastParts.filter((p) => /^P[1-6]$/.test(p.id)).length;
     const baseCount = lastParts.filter((p) => /^B[1-7]$/.test(p.id)).length;
+    const baseLabel = baseIdsLabel();
+    const baseNoun = baseCount === 1 ? "barra" : "barras";
     const putSummary = (id, value) => { const el = $(id); if(el) el.textContent = value; };
     putSummary("client-summary-legs", legCount);
     putSummary("client-summary-base", baseCount);
     putSummary("client-summary-tops", `2 peças · ${fmtM(g.L1)}×${fmtM(g.P)} e ${fmtM(g.L2)}×${fmtM(g.P2)} m`);
     putSummary("client-summary-finish", finish.toLowerCase());
+    putSummary("base-note-total", lastParts.length);
+    putSummary("base-note-bars", baseCount);
+    putSummary("step4-bars", baseCount ? `${baseCount} ${baseNoun} de reforço inferior (${baseLabel})` : "as barras de reforço inferior previstas");
+    putSummary("spec-base", baseCount ? `${baseCount} ${baseNoun} ${baseLabel} · a 150 mm do piso · soldadas` : "sem reforço inferior nesta configuração");
 
     const sg = steelGeom(g);
     const steelGroups = steelPieces(g);
@@ -1613,12 +1611,13 @@
     const baseLen = baseGroups.reduce((a,x) => a + x.qty * x.len, 0);
     const baseCount = baseGroups.reduce((a,x) => a + x.qty, 0);
     const customCount = steelGroups.filter((x) => x.key.startsWith("custom_steel_")).reduce((a,x) => a + x.qty, 0);
+    const baseLabel = baseIdsLabel();
     const legCount = 6 - [...state.removed].filter((id) => /^P[1-6]$/.test(id)).length;
     const bars = lastBars.bars.length;
     const rows = [
       ["Tubo quadrado 40×40×2 mm", `${bars} barras de 6 m`, `Pernas, quadro em L, 3 travessas internas, ${baseCount} barras de reforço inferior e ${customCount} peças avulsas; ${steelTotal} mm de corte`],
       ["Solda MIG/TIG (ou eletrodo 2,5 mm)", `~${30 + (baseCount + customCount) * 2} pontos`, "Quadro + pernas + travessas + base de reforço; conferir esquadro antes de soldar tudo"],
-      ...(baseCount ? [["Barra de reforço inferior", `${baseCount} peças · ${baseLen} mm`, "B1–B7 a 150 mm do piso; soldada nas pernas; apoio de pé e travamento"]] : []),
+      ...(baseCount ? [["Barra de reforço inferior", `${baseCount} peças · ${baseLen} mm`, `${baseLabel} a 150 mm do piso; soldada nas pernas; apoio de pé e travamento`]] : []),
       ["Fundo antiferrugem + epóxi preto fosco", "1 kit", "Limpar solda, desengordurar e pintar; 2 demãos"],
       ["Pé ajustável M8 com base de nylon", `${legCount}`, "Uma por perna; nivelar no piso"],
       ["Parafuso 4,2×32 + arruela Ø16", "10 (9 + 1 reserva)", "Tampo ↔ quadro; 1 âncora por tampo e os demais em rasgo 6×30"],
@@ -1731,70 +1730,13 @@
     </table>`;
     return `<h3 class="parts-title" style="margin-top:0">Plano do ferro — barras de 6 m</h3>`
       + bars.map((b,i) => barMarkup(b,i,bars.length)).join("")
-      + `<p class="note" style="margin-top:10px"><strong>${bars.length} barras de 6 m:</strong> ${totalLen} mm de corte · ${totalPieces} peças de ferro · sobra ${waste} mm. Cortar com disco de 1,6 mm; lixar rebarba e chanfrar antes de soldar. <strong>Canto interno Q4/Q5:</strong> meia-esquadria a 45°; conferir no gabarito. <strong>Reforço inferior B1–B7:</strong> soldar nas pernas a 150 mm do piso, com o quadro já esquadrejado.</p>`
+      + `<p class="note" style="margin-top:10px"><strong>${bars.length} barras de 6 m:</strong> ${totalLen} mm de corte · ${totalPieces} peças de ferro · sobra ${waste} mm. Cortar com disco de 1,6 mm; lixar rebarba e chanfrar antes de soldar. <strong>Canto interno Q4/Q5:</strong> meia-esquadria a 45°; conferir no gabarito. <strong>Reforço inferior ${baseIdsLabel()}:</strong> soldar nas pernas a 150 mm do piso, com o quadro já esquadrejado.</p>`
       + table;
   }
 
   const brl = (v) => v.toLocaleString("pt-BR", { style:"currency", currency:"BRL" });
 
-  function renderCost(){
-    const sheets = lastPack.sheets.length;
-    const bars = lastBars.bars.length;
-    const legCount = 6 - [...state.removed].filter((id) => /^P[1-6]$/.test(id)).length;
-    const sheetUnit = 302.33, barUnit = 150;
-    const steelPackage = bars * barUnit + 500 + 150 + 60 + 40;
-    const feetCost = 60 * legCount / 6;
-    const lines = [
-      [`${sheets} chapas de pinus 15 mm × ${brl(sheetUnit)}`, sheets * sheetUnit],
-      [`${bars} barras de ferro 40×40×2 × ${brl(barUnit)} (estimativa)`, bars * barUnit],
-      ["Solda (serviço) — estimativa", 500.00],
-      ["Pintura: fundo + epóxi preto", 150.00],
-      [`${legCount} pés ajustáveis M8`, feetCost],
-      ["Parafusos, arruelas e brocas", 40.00],
-      ["Insumos (lixa, verniz, pincel, thinner, EPI)", 200.00],
-      ["Desgaste de ferramentas", 80.00],
-      ["Depreciação", 35.00],
-      ["Energia", 35.00],
-      ["Mão de obra: 10 h × R$ 45,00", 450.00]
-    ];
-    const base = lines.reduce((a,[,v]) => a + v, 0);
-    const overhead = base * 0.05, cont = base * 0.05;
-    const total = base + overhead + cont;
-    const price = (margin) => total / (1 - margin - 0.05);
-    const woodCost = sheets * sheetUnit;
-    const steelCost = bars * barUnit + 500 + 150 + feetCost + 40;
-    const laborCost = 200 + 80 + 35 + 35 + 450;
-    const factor = price(0.50) / base;
-    lastCost = { total, list: price(0.50), floor: price(0.45), absolute: price(0.40), wood: woodCost * factor, steel: steelCost * factor, labor: laborCost * factor };
-    const sum = lines.map(([n,v]) => `<tr><td>${n}</td><td>${brl(v)}</td></tr>`).join("");
-    const costTable = `<table class="parts-table cost-table">
-      <thead><tr><th>Item</th><th>Valor</th></tr></thead>
-      <tbody>${sum}
-        <tr><td>Overhead 5%</td><td>${brl(overhead)}</td></tr>
-        <tr><td>Contingência 5%</td><td>${brl(cont)}</td></tr>
-      </tbody>
-      <tfoot><tr><td><b>Custo total</b></td><td><b>${brl(total)}</b></td></tr></tfoot>
-    </table>`;
-    const isOriginal = state.L1 === DEFAULTS.L1 && state.L2 === DEFAULTS.L2
-      && state.P === DEFAULTS.P && state.P2 === DEFAULTS.P2 && state.H === DEFAULTS.H;
-    const compare = [
-      ["Caibro + tampo 15 mm, 14 h", 2238.13],
-      ["Caibro + tampo 18 mm, 14 h", 2490.51],
-      ["Painel 15 mm, 18 h, 5 chapas", 3213.82],
-      ["Ferro + tampo 15 mm, 10 h (estimativa)", total]
-    ];
-    const cmp = compare.map(([n,c]) => `<tr><td>${n}</td><td>${brl(c)}</td><td>${brl(c/0.45)}</td><td>${brl(c/0.50)}</td><td>${brl(c/0.55)}</td></tr>`).join("");
-    const compareBlock = isOriginal
-      ? `<table class="parts-table compact cost-table" style="margin-top:12px">
-          <thead><tr><th>Projeto original</th><th>Custo</th><th>50% lista</th><th>45% piso</th><th>40% absoluto</th></tr></thead>
-          <tbody>${cmp}</tbody>
-        </table>
-        <p class="note" style="margin-top:10px;margin-bottom:0"><strong>Leitura honesta:</strong> o ferro é ${brl(7141.81 - price(0.50))} mais barato que o painel de 5 chapas no preço de lista, mas ${brl(price(0.45) - 4476.26)} mais caro que o caibro 15 mm no piso de 45%. Para empatar com o caibro 15 mm (14 h), o pacote ferro+solda+pintura+pés+parafusos teria de ficar em ~R$ 630 (com 10 h) ou ~R$ 720 (com 8 h); a estimativa atual é ${brl(steelPackage)}. Só ganha se você soldar em casa ou achar solda muito barata.</p>`
-      : `<p class="note" style="margin-top:10px;margin-bottom:0"><strong>Fora do projeto original:</strong> o material acompanha as medidas (${sheets} chapas + ${bars} barras), mas solda, pintura e mão de obra continuam estimativa fixa. A comparação com caibro/painel não é recalculada para medidas diferentes. Custo interno, não é proposta.</p>`;
-    $("cost-table").innerHTML = `<p class="note" style="margin-top:0"><strong>Estudo interno — não é proposta.</strong> Ferro, solda e pintura são estimativas; cotar em ferro-velho/serraria e com o soldador antes de fechar preço. Base v3: custo + 10% (overhead + contingência); preço divide por (1 − margem − 5%).</p>
-      ${costTable}
-      ${compareBlock}`;
-  }
+  function renderCost(){ lastCost = null; }
 
   function renderPartManager(allParts){
     const el = $("part-manager");
@@ -2534,8 +2476,7 @@
      Fonte: 10-documentacao/PROJETOS/mesa-em-l/ORCAMENTO-NA-FERRAMENTA.md
      NAO calcular preco no front: preco vem daqui. Com auditado_financeiro=false,
      o preco aparece com o selo "sujeito a confirmação" (decisão do Ygor 23/10). -->
-<script type="application/json" id="orcamento-cliente">
-{
+<script type="application/json" id="orcamento-cliente">{
   "schema": "orcamento-cliente/1",
   "projeto": "mesa-em-l",
   "modelo": "Mesa em L executiva — base de ferro",
@@ -2544,7 +2485,6 @@
   "validade_dias": 7,
   "prazo_dias_uteis": 15,
   "auditado_financeiro": false,
-  "auditoria": "preço de 45% direto (R$ 6.060,26) sobre custo de R$ 3.030,13; ferro/solda/pintura ainda em estimativa; cotação pendente.",
   "medidas": {
     "L1": 1500,
     "L2": 2100,
@@ -2563,11 +2503,11 @@
       "espessura_mm": 15,
       "peso_kg": 80,
       "resumo": "estrutura soldada + base de reforço (4 barras de 6 m)",
-      "estrutura": 2970.0,
+      "estrutura": 2970,
       "tampos": 1330.26,
-      "acabamento": 1760.0,
+      "acabamento": 1760,
       "material": 4300.26,
-      "mao_obra": 1760.0
+      "mao_obra": 1760
     }
   ],
   "inclui": [
@@ -2594,15 +2534,7 @@
     "validade_dias": 7,
     "prazo_dias_uteis": 15
   },
-  "clausula_sinal": "O sinal de 50% garante a compra da madeira e o início da produção. Antes do corte da madeira, ele é devolvido integralmente se a compra não seguir. Depois do corte, não é reembolsável, porque a chapa já foi comprometida no seu projeto.",
-  "regras": {
-    "margem_lista": 0.5,
-    "margem_direta": 0.45,
-    "margem_absoluta": 0.4,
-    "desconto_maximo": 0.1,
-    "imposto_reserva": 0.05
-  }
-}
-</script>
+  "clausula_sinal": "O sinal de 50% garante a compra da madeira e o início da produção. Antes do corte da madeira, ele é devolvido integralmente se a compra não seguir. Depois do corte, não é reembolsável, porque a chapa já foi comprometida no seu projeto."
+}</script>
 </body>
 </html>

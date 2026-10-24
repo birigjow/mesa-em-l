@@ -7,7 +7,7 @@
 
 `https://birigjow.github.io/mesa-em-l/`
 
-O `index.html` redireciona para `mesa-em-l-ferro.html?modo=cliente&publico=1` e mantém os parâmetros (`cliente`, `projeto`, medidas, acabamento, furos).
+O `index.html` redireciona para `mesa-em-l-cliente.html?modo=cliente&publico=1` e mantém os parâmetros (`cliente`, `projeto`, medidas, acabamento, furos).
 
 Link com um cliente específico (exemplo):
 
@@ -18,10 +18,9 @@ O botão **Copiar link do cliente** no configurador gera esse link automaticamen
 ## Arquivos
 
 - `index.html` — redireciona para o modo cliente público
-- `mesa-em-l-ferro.html` — configurador (3D, medidas, furos, acabamento, orçamento)
+- `mesa-em-l-cliente.html` — build só-cliente (3D, medidas, furos, acabamento, orçamento; sem custo/margem)
 - `logo.jpg` — favicon e imagem de marca
 - `og-mesa-em-l.jpg` — cartão de prévia (WhatsApp/redes)
-- `mesa-em-l-ferro.pdf` — PDF de 8 páginas (opcional; link direto)
 
 ## Como publicar (GitHub Pages)
 
@@ -34,10 +33,10 @@ O botão **Copiar link do cliente** no configurador gera esse link automaticamen
 
 ## Como atualizar
 
-- Substitua `mesa-em-l-ferro.html` pelo novo build.
+- Substitua `mesa-em-l-cliente.html` pelo novo build (gerado por `_build/cliente/gerar-cliente.mjs`).
 - Rode os testes em 390 px e 1440 px: 3D, furos, orçamento, sem overflow.
 - Se o nome do repositório mudar, troque `PUBLIC_BASE` no HTML e as URLs `og:image`/`og:url`.
 
 ## Cuidado
 
-O HTML é o mesmo build do dono; o modo público esconde as ferramentas internas, mas o código-fonte ainda contém o build completo. Se o custo interno for sigiloso, o próximo passo é gerar um build só-cliente (sem tabela de custo) antes de publicar. Hoje a interface esconde; o fonte não.
+O arquivo publicado é o **build só-cliente** (sem tabela de custo, sem margens, sem regras de desconto). O build do dono, com custo e comparativo, fica fora deste repositório.

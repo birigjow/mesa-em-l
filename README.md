@@ -22,7 +22,7 @@ O cliente não vê custo interno, margem, peças, plano de corte ou ferramentas 
 
 `https://birigjow.github.io/mesa-em-l/`
 
-O `index.html` redireciona para `mesa-em-l-ferro.html?modo=cliente&publico=1` e preserva os parâmetros (`cliente`, `projeto`, medidas, lado, acabamento, furos, peças removidas/avulsas).
+O `index.html` redireciona para `mesa-em-l-cliente.html?modo=cliente&publico=1` e preserva os parâmetros (`cliente`, `projeto`, medidas, lado, acabamento, furos, peças removidas/avulsas).
 
 No configurador, o botão **Copiar link do cliente** gera a URL com a configuração atual. O modo público esconde “Ver tudo”, “Sair” e o botão do dono.
 
@@ -30,8 +30,7 @@ No configurador, o botão **Copiar link do cliente** gera a URL com a configura�
 
 ```
 index.html                  redireciona para o modo cliente público
-mesa-em-l-ferro.html        configurador (3D + medidas + furos + acabamento + orçamento)
-mesa-em-l-ferro.pdf         PDF de 8 páginas (opcional)
+mesa-em-l-cliente.html     build só-cliente (3D + medidas + furos + acabamento + orçamento; sem custo/margem)
 logo.jpg                    favicon/marca
 og-mesa-em-l.jpg            cartão 1200×630 para WhatsApp/redes
 tools/make-og.py            gerador do cartão de prévia
@@ -44,7 +43,7 @@ LEIA-ME.md / PUSH-GITHUB.md manutenção e publicação
 ## Como usar em um móvel novo
 
 1. Copie a pasta para `PROJETOS/<novo-movel>/site/`.
-2. Troque o HTML pelo build do novo móvel (mesmo contrato `?modo=cliente&publico=1` e `#orcamento-cliente`).
+2. Troque o HTML pelo build só-cliente do novo móvel (mesmo contrato `?modo=cliente&publico=1` e `#orcamento-cliente`).
 3. Preencha o bloco `#orcamento-cliente` com o preço fechado pelo marceneiro e auditado pelo `financeiro`.
 4. Ajuste `PUBLIC_BASE`, `og:url` e `og:image` para o novo repositório.
 5. Teste em **390 px** e **1440 px**: 3D, furos, orçamento, sem overflow; 0 erro de console.
