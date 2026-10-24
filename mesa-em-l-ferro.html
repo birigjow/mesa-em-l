@@ -641,7 +641,7 @@
           </div>
           <div class="orc-card" id="orc-card">
             <div id="orc-offer">
-              <p class="orc-alt">Uma configuração: pinus 15 mm sobre base de ferro soldada. O valor é de referência e será confirmado com a cotação do ferro e da solda.</p>
+              <p class="orc-alt">Uma configuração: pinus 15 mm sobre base de ferro soldada. Proposta para aprovação do projeto; qualquer alteração de medida reavalia o valor.</p>
               <div class="orc-opts" id="orc-opts" role="group" aria-label="Alternativa de chapa"></div>
               <p class="orc-price" id="orc-price">—</p>
               <p class="orc-price-sub" id="orc-price-sub"></p>
@@ -1401,9 +1401,9 @@
 
     const rows = $("orc-rows");
     rows.textContent = "";
-    orcRow(rows, "Material", brl(Number(o.material)));
-    orcRow(rows, "Mão de obra", brl(Number(o.mao_obra)));
-    orcRow(rows, "Total do orçamento", brl(Number(o.preco)));
+    orcRow(rows, "Estrutura metálica + solda + pintura", brl(Number(o.estrutura)));
+    orcRow(rows, "Tampos de pinus 15 mm", brl(Number(o.tampos)));
+    orcRow(rows, "Acabamento, ferragens e montagem", brl(Number(o.acabamento)));
     orcRow(rows, "Sinal de 50% · Pix", brl(Number(o.sinal_pix)));
     orcRow(rows, "Sinal de 50% · cartão", brl(Number(o.sinal_cartao)));
     orcRow(rows, "Total no cartão", `${brl(Number(o.cartao))} · taxa embutida`);
@@ -1435,8 +1435,10 @@
     const validade = Number(cond.validade_dias ?? ORCAMENTO.validade_dias);
     const selo = ORCAMENTO.auditado_financeiro === true ? "" : " (sujeito a confirmação)";
     const linhas = [
-      `Material: ${brl(Number(o.material))}`,
-      `Mão de obra: ${brl(Number(o.mao_obra))}`,
+      `Proposta para aprovação do projeto — Mesa em L`,
+      `Estrutura metálica + solda + pintura: ${brl(Number(o.estrutura))}`,
+      `Tampos de pinus 15 mm: ${brl(Number(o.tampos))}`,
+      `Acabamento, ferragens e montagem: ${brl(Number(o.acabamento))}`,
       `Total do orçamento: ${brl(Number(o.preco))}${selo}`,
       `Sinal de 50%: ${brl(Number(o.sinal_pix))} no Pix · ${brl(Number(o.sinal_cartao))} no cartão`,
       `Total no cartão: ${brl(Number(o.cartao))} (taxa embutida)`
@@ -2537,15 +2539,15 @@
   "schema": "orcamento-cliente/1",
   "projeto": "mesa-em-l",
   "modelo": "Mesa em L executiva — base de ferro",
-  "cliente": "Ageu",
+  "cliente": "Ygor",
   "data": "2026-10-23",
   "validade_dias": 7,
   "prazo_dias_uteis": 15,
   "auditado_financeiro": false,
-  "auditoria": "estimativa da base v3 (23/10); cotação de ferro/solda e pintura pendente; financeiro audita antes de fechar.",
+  "auditoria": "preço de 45% direto (R$ 6.060,26) sobre custo de R$ 3.030,13; ferro/solda/pintura ainda em estimativa; cotação pendente.",
   "medidas": {
-    "L1": 2100,
-    "L2": 1500,
+    "L1": 1500,
+    "L2": 2100,
     "P1": 900,
     "P2": 900,
     "H": 750
@@ -2554,19 +2556,22 @@
     {
       "id": "A",
       "rotulo": "Ferro + pinus 15 mm",
-      "preco": 7100.28,
-      "sinal_pix": 3550.14,
-      "sinal_cartao": 3678.9,
-      "cartao": 7357.8,
+      "preco": 6060.26,
+      "sinal_pix": 3030.13,
+      "sinal_cartao": 3140.03,
+      "cartao": 6280.06,
       "espessura_mm": 15,
       "peso_kg": 80,
-      "resumo": "estrutura soldada + base de reforço",
-      "material": 4240.0,
-      "mao_obra": 2860.28
+      "resumo": "estrutura soldada + base de reforço (4 barras de 6 m)",
+      "estrutura": 2970.0,
+      "tampos": 1330.26,
+      "acabamento": 1760.0,
+      "material": 4300.26,
+      "mao_obra": 1760.0
     }
   ],
   "inclui": [
-    "estrutura de ferro 40×40×2 com 6 pernas e base de reforço",
+    "estrutura de ferro 40×40×2 com 6 pernas e base de reforço (5 peças; 4 barras de 6 m)",
     "2 tampos de pinus 15 mm",
     "2 furos Ø60 para passagem de cabos",
     "fixação que acompanha o movimento da madeira",

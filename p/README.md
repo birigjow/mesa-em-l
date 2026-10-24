@@ -10,8 +10,8 @@ Exemplo: `https://birigjow.github.io/mesa-em-l/p/ygor/`
 
 Exemplos prontos:
 
-- `p/ygor/` — principal 1500 / retorno 2100, furos 80/80, B6/B5 removidas; orçamento **“a confirmar”** (medidas fora do bloco aprovado).
-- `p/ygor-preco/` — principal 2100 / retorno 1500, mesmo acabamento; orçamento **R$ 7.100,28**.
+- `p/ygor/` — principal 1500 / retorno 2100, furos 80/80, B6/B5 removidas, 4 barras de 6 m; orçamento **R$ 6.060,26** (45% direto; selo “sujeito a confirmação”).
+- `p/ygor-preco/` — **antigo**; redireciona para `p/ygor/`. Não usar em proposta nova.
 
 ## Criar um novo
 
